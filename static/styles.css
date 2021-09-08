@@ -4,6 +4,7 @@ html, body {
   background: rgba(255, 251, 231, 1);
   color: rgba(95, 63, 67, .6);
   font-size: 16px;
+  padding-bottom: 2em;
 }
 
 .wrap {
@@ -96,6 +97,10 @@ h1#page-title {
   font-weight: 600;
   padding: 0 .5em;
   margin-bottom: 2em;
+}
+
+.block-today {
+  margin-bottom: 0;
 }
 
 .block-today article {
@@ -200,6 +205,17 @@ a:hover {
   color: #000;
 }
 
+.btn-fixed {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 300px;
+  box-shadow: 0px 2px 15px #3EC4FE;
+  z-index: 9999;
+}
+
 #panel {
   position: fixed;
   top: 0;
@@ -270,24 +286,46 @@ a:hover {
   height: 180px;
   margin-right: 10px;
   background: #000;
-  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
 }
 
-.carousel-cell:after {
-  content: "contenido destacado";
-  color: #fff;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.carousel-cell .content {
+  padding: 15px 0;
+  color: rgba(255, 251, 231, 1);
+  text-shadow: 0px 0px 10px rgba(0,0,0,.75);
 }
 
-.item-01 { background: #F27080; }
-.item-02 { background: #5F3F43; }
-.item-03 { background: #3EC4FE; }
-.item-04 { background: #FEC83E; }
-.item-05 { background: #3EFE46; }
+.carousel-cell .content h5 {
+  margin: 0;
+  font-size: 1em;
+  background: rgba(0,0,0,.4);
+  padding: 0 5px;
+  backdrop-filter: blur(10px);
+}
+
+.carousel-cell .content small {
+  background: rgba(0,0,0,.4);
+  padding: 0 5px;
+  backdrop-filter: blur(10px);
+}
+
+.item-01 { 
+  background:url(images/item-01.jpg) no-repeat; 
+  background-size: cover;
+}
+.item-02 { 
+  background:url(images/item-02.jpg) no-repeat; 
+  background-size: cover;
+ }
+.item-03 {
+  background:url(images/item-03.jpg) no-repeat; 
+  background-size: cover;
+}
+.item-04 {
+  background:url(images/item-04.jpg) no-repeat; 
+  background-size: cover;
+}
 
 @media screen and ( min-width: 768px ) {
   /* half-width cells for larger devices */
